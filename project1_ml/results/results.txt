@@ -1,0 +1,20 @@
+I.1 mean_squared_error_gd                  F1 0.4176 ± 0.0054   acc 0.8677   OOF-F1 0.4184
+I.2 mean_squared_error_sgd                 F1 0.3519 ± 0.0471   acc 0.8402   OOF-F1 0.3439
+I.3 least_squares                          F1 0.4178 ± 0.0054   acc 0.8678   OOF-F1 0.4180
+I.4 ridge_regression                       F1 0.4167 ± 0.0052   acc 0.8640   OOF-F1 0.4180
+I.5 logistic_regression                    F1 0.4189 ± 0.0027   acc 0.8686   OOF-F1 0.4196
+I.6 reg_logistic_regression                F1 0.4193 ± 0.0026   acc 0.8677   OOF-F1 0.4193
+II.1 Newton logistic (base features)       F1 0.4278 ± 0.0039   acc 0.8733   OOF-F1 0.4279
+II.2 + keep columns <=90% missing          F1 0.4283 ± 0.0044   acc 0.8726   OOF-F1 0.4296
+II.3 + codebook decoding + log             F1 0.4296 ± 0.0043   acc 0.8731   OOF-F1 0.4305
+II.4 + interactions top-20 (model A)       F1 0.4308 ± 0.0036   acc 0.8701   OOF-F1 0.4311
+II.5 MLP 128-64 x3 (model B)               F1 0.4303 ± 0.0053   acc 0.8793   OOF-F1 0.4316
+II.6 GBDT 300 trees depth 5 (model C)      F1 0.4273 ± 0.0047   acc 0.8858   OOF-F1 0.4313
+blend II.4 + II.5                          OOF-F1 0.4327   threshold 0.21563
+blend II.4 + II.6                          OOF-F1 0.4339   threshold 0.21141
+blend II.5 + II.6                          OOF-F1 0.4341   threshold 0.22961
+blend II.4 + II.5 + II.6                   OOF-F1 0.4345   threshold 0.21470
+III.1 class weight 10 for positives        F1 0.4283 ± 0.0040   acc 0.8734   OOF-F1 0.4299
+III.2 feature selection top-200            F1 0.4241 ± 0.0027   acc 0.8688   OOF-F1 0.4245
+III.3 + squared numeric features           F1 0.4301 ± 0.0035   acc 0.8694   OOF-F1 0.4308
+III.4 no one-hot encoding                  F1 0.4253 ± 0.0049   acc 0.8696   OOF-F1 0.4265
